@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1>Best Boba spots in Irvine:</h1>
+  <p>*according to Yelp, sorted by rating</p>
+  {% for post in posts %}
+    <article>
+      <h3>{{post}}</h3>
+    </article>
+  {% endfor %}
+{% endblock content %}
