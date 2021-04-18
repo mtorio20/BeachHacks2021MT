@@ -13,6 +13,7 @@ firebaseConfig = {
     'measurementId': "x",
     "databaseURL" : "x"
 }
+
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth=firebase.auth()
 db=firebase.database()
@@ -34,9 +35,6 @@ def search(food, location):
     food = request.form['food']
     location = request.form['location']
     return render_template('best.html', posts=best_in_town(food,location))
-
-def example(food, location):
-    return f'<h1>{food}{location}</h1>'
 
 
 @app.route("/best")
